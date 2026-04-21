@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaga Alam — Protect Indonesia's Endangered Species</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#1a3c2e',
+            leaf:   '#2d6a4f',
+            moss:   '#52b788',
+            sand:   '#f4e9d8',
+            amber:  '#e07b39',
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="font-body bg-white text-gray-800">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 flex items-center justify-between">
+    <a href="#" class="text-white font-heading text-2xl font-bold tracking-wide">Jaga<span class="text-moss">Alam</span></a>
+    <ul class="hidden md:flex gap-8 text-white text-sm font-medium">
+      <li><a href="#about" class="hover:text-moss transition">About</a></li>
+      <li><a href="#species" class="hover:text-moss transition">Species</a></li>
+      <li><a href="#impact" class="hover:text-moss transition">Our Impact</a></li>
+      <li><a href="#contact" class="hover:text-moss transition">Contact</a></li>
+    </ul>
+    <a href="#donate" class="hidden md:inline-block bg-amber text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition">Donate Now</a>
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-forest z-40 flex flex-col items-center justify-center gap-8 text-white text-xl">
+    <button id="close-menu" class="absolute top-6 right-6 text-white">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <a href="#about" class="mobile-link hover:text-moss transition">About</a>
+    <a href="#species" class="mobile-link hover:text-moss transition">Species</a>
+    <a href="#impact" class="mobile-link hover:text-moss transition">Our Impact</a>
+    <a href="#contact" class="mobile-link hover:text-moss transition">Contact</a>
+    <a href="#donate" class="mobile-link bg-amber px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">Donate Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <div class="hero-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1600&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-forest/80 via-forest/60 to-forest/90"></div>
+    <div class="relative z-10 max-w-3xl px-6">
+      <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-4">Indonesia's Wildlife Needs You</p>
+      <h1 class="font-heading text-5xl md:text-7xl text-white leading-tight mb-6">
+        Protect What <br/><span class="text-moss">Cannot Speak</span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-xl mx-auto">
+        Over 700 species in Indonesia face extinction. Together, we can change that — one action at a time.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#species" class="bg-moss text-white font-semibold px-8 py-3 rounded-full hover:bg-leaf transition">Meet the Species</a>
+        <a href="#donate" class="border border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-forest transition">Support Us</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6 bg-sand">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-3">Who We Are</p>
+        <h2 class="font-heading text-4xl text-forest mb-6 leading-snug">A Voice for Indonesia's Vanishing Wildlife</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          JagaAlam is a non-profit organization dedicated to raising awareness and driving action to protect Indonesia's most endangered species. From the rainforests of Sumatra to the coral reefs of Raja Ampat, we work with local communities, researchers, and policymakers.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Our mission is simple: ensure that future generations can still witness the incredible biodiversity that makes Indonesia one of the world's most ecologically rich nations.
+        </p>
+        <a href="#impact" class="text-moss font-semibold hover:underline">See our impact →</a>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?w=800&q=80" alt="Orangutan in the wild" class="rounded-2xl shadow-xl w-full object-cover h-80" />
+        <div class="absolute -bottom-6 -left-6 bg-forest text-white p-5 rounded-xl shadow-lg">
+          <p class="text-3xl font-bold text-moss">700+</p>
+          <p class="text-sm text-gray-300">Species at risk</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIES -->
+  <section id="species" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-3">Featured Species</p>
+        <h2 class="font-heading text-4xl text-forest">They Need Our Help</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8" id="species-grid">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="py-24 px-6 bg-forest text-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-3">Our Impact</p>
+      <h2 class="font-heading text-4xl mb-16">What We've Achieved Together</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10" id="stats-grid">
+        <!-- Stats injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate" class="py-24 px-6 bg-sand">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-3">Take Action</p>
+      <h2 class="font-heading text-4xl text-forest mb-4">Every Rupiah Counts</h2>
+      <p class="text-gray-600 mb-10">Your donation directly funds habitat protection, anti-poaching patrols, and community education programs.</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8" id="donation-amounts">
+        <!-- Buttons injected by JS -->
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-8">
+        <form id="donate-form" class="flex flex-col gap-4">
+          <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss" required />
+          <input type="email" placeholder="Email Address" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss" required />
+          <input type="number" id="custom-amount" placeholder="Custom Amount (IDR)" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss" />
+          <button type="submit" class="bg-amber text-white font-semibold py-3 rounded-full hover:bg-orange-600 transition text-lg">Donate Now</button>
+        </form>
+        <p id="form-msg" class="mt-4 text-moss font-medium hidden">Thank you for your support! 🌿</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <div>
+        <p class="text-moss uppercase tracking-widest text-sm font-semibold mb-3">Get In Touch</p>
+        <h2 class="font-heading text-4xl text-forest mb-6">Partner With Us</h2>
+        <p class="text-gray-600 mb-8">Whether you're a researcher, journalist, business, or passionate individual — we'd love to hear from you.</p>
+        <div class="flex flex-col gap-4 text-gray-600">
+          <p>📍 Jakarta, Indonesia</p>
+          <p>📧 hello@jagaalam.org</p>
+          <p>📞 +62 21 1234 5678</p>
+        </div>
+      </div>
+      <form id="contact-form" class="flex flex-col gap-4">
+        <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss" required />
+        <input type="email" placeholder="Email Address" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss" required />
+        <textarea rows="5" placeholder="Your Message" class="border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-moss resize-none" required></textarea>
+        <button type="submit" class="bg-leaf text-white font-semibold py-3 rounded-full hover:bg-forest transition">Send Message</button>
+        <p id="contact-msg" class="text-moss font-medium hidden">Message sent! We'll be in touch soon. 🌱</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-forest text-gray-400 py-10 px-6 text-center text-sm">
+    <p class="text-white font-heading text-xl mb-2">Jaga<span class="text-moss">Alam</span></p>
+    <p class="mb-4">Protecting Indonesia's biodiversity, one species at a time.</p>
+    <div class="flex justify-center gap-6 mb-6">
+      <a href="#" class="hover:text-moss transition">Instagram</a>
+      <a href="#" class="hover:text-moss transition">Twitter</a>
+      <a href="#" class="hover:text-moss transition">Facebook</a>
+      <a href="#" class="hover:text-moss transition">YouTube</a>
+    </div>
+    <p>© 2026 JagaAlam. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
